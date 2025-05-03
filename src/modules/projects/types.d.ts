@@ -4,6 +4,7 @@ declare type Project = {
     name: string;
     description: string;
     slug: string;
+    customer: number;
 
     links: Link[];
     logo: string;
@@ -15,4 +16,9 @@ declare type Project = {
 declare type Link = {
     name: string;
     url: string;
+}
+
+declare type Customer = {
+    id: number;
+    name: string;
 }

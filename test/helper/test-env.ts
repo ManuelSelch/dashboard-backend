@@ -4,6 +4,7 @@ import { Test } from '@nestjs/testing';
 import { AppModule } from 'src/app.module';
 import { ProjectRepository } from 'src/modules/projects/infra/project.repository';
 import { InMemoryRepository } from 'src/shared/infra/in-memory.repository';
+import { Repository } from 'src/shared/infra/base.repository';
 
 export class TestEnvironment {
     async setup() {
@@ -26,5 +27,5 @@ export class TestEnvironment {
     }
 
     private app: INestApplication;
-    private projectRepo = InMemoryRepository<Project>
+    private projectRepo = new InMemoryRepository<Project>()
 }
