@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { SkillDto } from './skill.dto';
+import { SkillDto } from './api/skill.dto';
 
 
 const skills: Skill[] = [

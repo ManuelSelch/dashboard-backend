@@ -1,6 +1,6 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { ProjectRepository } from '../infra/project.repository';
-import { CustomerRepository } from '../infra/customer.repository';
+import { ProjectRepository } from './infra/project.repository';
+import { CustomerRepository } from './infra/customer.repository';
 
 @Controller('projects')
 export class ProjectsController {

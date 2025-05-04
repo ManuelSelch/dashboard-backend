@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { TasksController } from './api/tasks.controller';
+import { TasksController } from './tasks.controller';
 import { TaskRepository } from './infra/task.repository';
 
 @Module({
