@@ -2,12 +2,16 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { INestApplication } from '@nestjs/common';
+import * as express from 'express';
+import { join } from 'path';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  createSwagger(app);
+	const app = await NestFactory.create(AppModule);
   
-  await app.listen(process.env.PORT ?? 3000);
+  	createSwagger(app);
+	app.use("/public", express.static(join(process.cwd(), "public")));
+
+  	await app.listen(process.env.PORT ?? 3000);
 }
 
 function createSwagger(app: INestApplication) {
