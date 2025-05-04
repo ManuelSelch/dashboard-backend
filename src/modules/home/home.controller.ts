@@ -11,10 +11,10 @@ const skills: Skill[] = [
 
 const about: string = `
 Hey ich bin Manuel Selch,
-hier teile ich meine Projekte, Erfahrungen, die mich als Entwickler und kreative Person antreiben. 
+hier teile ich meine Projekte & Erfahrungen, die mich als Entwickler antreiben.
 
-Ich habe umfangreiche Erfahrungen in der Softwareentwicklung, sowohl im Backend als auch im Frontend.
-Neben meiner Arbeit als Entwickler interessiere ich mich für effiziente Projektorganisation, Automatisierung und alles, was die Etnwicklerproduktivität steigern kann. 
+Ich habe umfangreiche Erfahrungen in der Softwareentwicklung, sowohl im Backend als auch Frontend.
+Neben meiner Arbeit als Entwickler interessiere ich mich für effiziente Projektorganisation, Automatisierung und alles was die Produktivität steigern kann. 
 `
   
 @Controller('home')
