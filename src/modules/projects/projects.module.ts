@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ProjectsController } from './projects.controller';
 import { ProjectRepository } from './infra/project.repository';
 import { CustomerRepository } from './infra/customer.repository';
-import { TaskRepository } from '../tasks/infra/task.repository';
+import { TaskRepository } from './features/tasks/infra/task.repository';
 
 @Module({
   controllers: [ProjectsController],

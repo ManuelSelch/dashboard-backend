@@ -1,4 +1,4 @@
-import { TaskDto } from "src/modules/tasks/api/task.dto";
+import { TaskDto } from "src/modules/projects/features/tasks/api/task.dto";
 
 export class ProjectDetailDto {
     id: number;

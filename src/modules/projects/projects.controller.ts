@@ -3,7 +3,7 @@ import { ProjectRepository } from './infra/project.repository';
 import { CustomerRepository } from './infra/customer.repository';
 import { ProjectListDto } from './api/project-list.dto';
 import { ProjectDetailDto } from './api/project-detail.dto';
-import { TaskRepository } from '../tasks/infra/task.repository';
+import { TaskRepository } from './features/tasks/infra/task.repository';
 
 @Controller('projects')
 export class ProjectsController {
