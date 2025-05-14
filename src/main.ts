@@ -9,9 +9,10 @@ async function bootstrap() {
 	const app = await NestFactory.create(AppModule);
   
   	createSwagger(app);
+	app.enableCors();
 	app.use("/public", express.static(join(process.cwd(), "public")));
 
-  	await app.listen(process.env.PORT ?? 3000);
+  	await app.listen(process.env.PORT ?? 3001);
 }
 
 function createSwagger(app: INestApplication) {

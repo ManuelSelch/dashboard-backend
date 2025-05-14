@@ -1,6 +1,6 @@
 import { BadRequestException, Controller, Get, Param } from '@nestjs/common';
 import { ProjectRepository } from './infra/project.repository';
-import { CustomerRepository } from './infra/customer.repository';
+import { CustomerRepository } from '../customers/infra/customer.repository';
 import { ProjectListDto } from './api/project-list.dto';
 import { ProjectDetailDto } from './api/project-detail.dto';
 import { TaskRepository } from './features/tasks/infra/task.repository';
