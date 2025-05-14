@@ -1,4 +1,4 @@
-import { BadRequestException, Controller, Get, Param } from '@nestjs/common';
+import { BadRequestException, Controller, Get, Param, Query } from '@nestjs/common';
 import { ProjectRepository } from './infra/project.repository';
 import { CustomerRepository } from '../customers/infra/customer.repository';
 import { ProjectListDto } from './api/project-list.dto';
@@ -14,8 +14,11 @@ export class ProjectsController {
     ) {}
 
     @Get("/")
-    async findAll(): Promise<ProjectListDto[]> {
-        const projects = await this.projectRepo.findAll();
+    async findAll(@Query("customer") customer?: number): Promise<ProjectListDto[]> {
+        let projects = await this.projectRepo.findAll();
+        if(customer) 
+            projects = projects.filter(p => p.customer == customer)
+        
         return projects;
     }
 
